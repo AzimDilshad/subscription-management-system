@@ -6,34 +6,64 @@ import Icon from './components/Icon'
 
 const features = [
   {
-    icon: 'products',
-    title: 'Products & Plans',
-    description: 'Create products, variants, pricing tiers, and flexible daily, weekly, monthly, or yearly plans.',
+    icon: 'subscriptions',
+    title: 'Subscription lifecycle',
+    description: 'Start, renew, pause, resume, and close subscriptions with clear status and billing dates.',
   },
   {
-    icon: 'subscriptions',
-    title: 'Recurring Billing',
-    description: 'Prepare renewals and generate subscription invoices automatically on the right billing date.',
+    icon: 'quotes',
+    title: 'Quotations that convert',
+    description: 'Build customer quotations from products and plans, set validity and payment terms, then follow each quote through its lifecycle.',
   },
   {
     icon: 'invoices',
-    title: 'Invoices & Taxes',
-    description: 'Keep invoice details accurate with configured tax rules and clear payment statuses.',
+    title: 'Invoices & tax rules',
+    description: 'Generate invoices for billing periods, apply configured taxes, and keep every balance and due date visible.',
   },
   {
     icon: 'discounts',
-    title: 'Smart Discounts',
-    description: 'Set eligibility rules, validity dates, usage limits, and product or subscription discounts.',
+    title: 'Payments & refunds',
+    description: 'Record payments against invoices, review outstanding amounts, and track refund requests in one place.',
+  },
+  {
+    icon: 'products',
+    title: 'Flexible product catalog',
+    description: 'Organize products, variants, categories, plans, pricing periods, taxes, and discounts for your business.',
+  },
+  {
+    icon: 'browse',
+    title: 'Customer self-service',
+    description: 'Give customers a secure place to browse plans and manage subscriptions, quotations, invoices, payments, and profile details.',
+  },
+  {
+    icon: 'notifications',
+    title: 'Notifications & delivery log',
+    description: 'Manage message templates and review delivery activity so your team can see what was sent and when.',
+  },
+  {
+    icon: 'support',
+    title: 'Support in context',
+    description: 'Keep customer support requests alongside the account and billing information your team needs.',
+  },
+  {
+    icon: 'automation',
+    title: 'Billing automations',
+    description: 'Configure business rules for recurring billing, overdue reminders, quote expiry, and plan closure.',
   },
   {
     icon: 'reports',
-    title: 'Revenue Reporting',
-    description: 'View active subscriptions, received payments, outstanding balances, and overdue invoices.',
+    title: 'Reports & audit trail',
+    description: 'Review subscription activity, revenue, payments, balances, and the history of important record changes.',
+  },
+  {
+    icon: 'users',
+    title: 'Roles for every team',
+    description: 'Give admins, staff, and customers purpose-built screens and access for the work they need to do.',
   },
   {
     icon: 'settings',
-    title: 'Role-Based Access',
-    description: 'Give admins, staff, and customers the right tools and permissions for their accounts.',
+    title: 'Business settings',
+    description: 'Bring business details, payment options, quote templates, and billing preferences into one workspace.',
   },
 ]
 
@@ -101,10 +131,7 @@ function Landing() {
             </h1>
 
             <p>
-              Manage your plans, automate recurring invoices,
-              track payments, and understand your revenue.
-              Everything your subscription business needs,
-              all in one place.
+              From the first quotation to recurring billing and customer support, Brightloop keeps your products, plans, subscriptions, invoices, and payments connected.
             </p>
 
             <div className="hero-buttons">
@@ -136,45 +163,28 @@ function Landing() {
           <div className="hero-art">
             <div className="art-glow"></div>
 
-            <div className="art-card">
-
-              <div className="art-top">
-                <div className="art-icon">◈</div>
-                <span className="live-badge">
-                  <span></span> LIVE PREVIEW
-                </span>
+            <div className="art-card app-illustration">
+              <div className="mock-topbar">
+                <span className="mock-brand"><i></i> brightloop</span>
+                <span className="mock-search"><Icon name="search" size={12} /> Search anything</span>
+                <span className="mock-avatar">A</span>
               </div>
-
-              <h2>Subscription overview</h2>
-              <p className="art-subtitle">
-                Everything in one dashboard
-              </p>
-
-              <div className="art-line"></div>
-
-              <div className="art-row">
-                <span>Active subscriptions</span>
-                <strong>128</strong>
-              </div>
-
-              <div className="art-row">
-                <span>Upcoming renewals</span>
-                <strong>24</strong>
-              </div>
-
-              <div className="art-row">
-                <span>Invoices issued</span>
-                <strong>96</strong>
-              </div>
-
-              <div className="art-row">
-                <span>Billing status</span>
-                <strong className="success-text">On track ✓</strong>
-              </div>
-
-              <div className="art-footer">
-                <span>BRIGHTLOOP SOFTWARE</span>
-                <span>2026</span>
+              <div className="mock-layout">
+                <div className="mock-rail"><b className="selected"><Icon name="dashboard" size={14} /></b><b><Icon name="subscriptions" size={14} /></b><b><Icon name="invoices" size={14} /></b><b><Icon name="users" size={14} /></b><b><Icon name="settings" size={14} /></b></div>
+                <div className="mock-main">
+                  <div className="mock-heading"><div><small>MONDAY, OCTOBER 26</small><h2>Good morning, Alex</h2></div><span className="mock-period">This month⌄</span></div>
+                  <div className="mock-metrics">
+                    <div><small>RECURRING REVENUE</small><strong>$24,680</strong><em>↗ 12.8%</em></div>
+                    <div><small>ACTIVE PLANS</small><strong>184</strong><em>↗ 8.2%</em></div>
+                    <div><small>TO COLLECT</small><strong>$3,240</strong><em className="mock-neutral">12 invoices</em></div>
+                  </div>
+                  <div className="mock-chart-card">
+                    <div className="mock-card-title"><b>Revenue overview</b><span>Last 6 months</span></div>
+                    <div className="mock-chart"><div className="mock-y"><i>$30k</i><i>$20k</i><i>$10k</i></div><svg viewBox="0 0 420 105" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="#7556ed" stopOpacity=".2"/><stop offset="1" stopColor="#7556ed" stopOpacity="0"/></linearGradient></defs><path d="M0 84 C28 77 33 65 65 69 S108 54 135 59 S181 42 210 48 S255 28 282 37 S324 18 350 25 S392 7 420 12 V105 H0Z" fill="url(#chartFill)"/><path d="M0 84 C28 77 33 65 65 69 S108 54 135 59 S181 42 210 48 S255 28 282 37 S324 18 350 25 S392 7 420 12" fill="none" stroke="#6941f2" strokeWidth="3" strokeLinecap="round"/></svg></div>
+                    <div className="mock-months"><i>May</i><i>Jun</i><i>Jul</i><i>Aug</i><i>Sep</i><i>Oct</i></div>
+                  </div>
+                  <div className="mock-latest"><div><b>Recent activity</b><span>View all&nbsp; ↗</span></div><p><i className="mock-check"><Icon name="check" size={11} /></i><span><b>Payment received</b><small>Northstar Studio · Pro plan</small></span><strong>+$240</strong></p></div>
+                </div>
               </div>
             </div>
 
@@ -208,7 +218,7 @@ function Landing() {
                     <Icon name={feature.icon} size={23} strokeWidth={1.7} />
                   </div>
                   <span className="feature-number">
-                    0{index + 1}
+              {String(index + 1).padStart(2, '0')}
                   </span>
                 </div>
 
@@ -220,6 +230,27 @@ function Landing() {
             ))}
           </div>
 
+        </section>
+
+        <section className="lifecycle">
+          <div className="lifecycle-copy">
+            <span className="eyebrow">ONE CONNECTED WORKSPACE</span>
+            <h2>Every billing detail, in its <span>right place.</span></h2>
+            <p>Give your team a clear view of the full customer journey, with the right tools for each role.</p>
+            <ul>
+              <li><i><Icon name="check" size={14} /></i><span><b>For administrators</b><small>Manage billing, catalog, staff access, settings, and reports.</small></span></li>
+              <li><i><Icon name="check" size={14} /></i><span><b>For staff</b><small>Handle customer records, subscriptions, invoices, and payments.</small></span></li>
+              <li><i><Icon name="check" size={14} /></i><span><b>For customers</b><small>Browse plans and keep track of subscriptions and billing.</small></span></li>
+            </ul>
+          </div>
+          <div className="lifecycle-visual" aria-hidden="true">
+            <div className="lifecycle-orbit orbit-one"></div><div className="lifecycle-orbit orbit-two"></div>
+            <div className="lifecycle-center"><span>∞</span><b>One clear<br/>billing flow</b></div>
+            <div className="life-node node-quote"><Icon name="quotes" size={19}/><span>Quotations</span></div>
+            <div className="life-node node-plan"><Icon name="products" size={19}/><span>Plans</span></div>
+            <div className="life-node node-invoice"><Icon name="invoices" size={19}/><span>Invoices</span></div>
+            <div className="life-node node-customer"><Icon name="users" size={19}/><span>Customers</span></div>
+          </div>
         </section>
 
         {/* HOW IT WORKS */}
