@@ -1,0 +1,40 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+dist-ssr/
+coverage/
+
+# Local environment files (keep the safe template tracked)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Vercel local project metadata
+.vercel/
+
+# Logs and package-manager debug output
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local caches and temporary files
+.cache/
+.eslintcache
+*.local
+*.tmp
+
+# Editors and operating systems
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
